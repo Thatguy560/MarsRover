@@ -1,6 +1,6 @@
 require_relative 'Coordinates'
 class RoversPosition # < Coordinates
-  attr_accessor :command, :coordinates
+  # attr_accessor :command, :coordinates
 
   LOWERX = 0
   UPPERX = 5
@@ -9,16 +9,20 @@ class RoversPosition # < Coordinates
 
   def initialize(coordinates)
     # super(x, y, direction)
-    @command = command
+    # @command = command
     @coordinates = coordinates
   end
 
-  def command(_action)
+  def command(action)
     @coordinates.each do |coordinate|
-      if north(coordinate)
-        action = coordinate.direction = ('R' ? 'E' : 'N')
-        # coordinate.direction = "E" if action = "R"
-      end
+      next unless north(coordinate)
+
+      # action = coordinate.direction = ('R' ? 'E' : 'N')
+      coordinate.direction = if action == 'R'
+                               'E'
+                             else
+                               'N'
+                             end
     end
 
     def north(coordinate)
