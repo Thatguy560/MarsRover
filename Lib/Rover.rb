@@ -8,13 +8,18 @@ class Rover
     @direction = direction
   end
 
-  def move_east(action)
-    raise "can't travel east, not in the correct direction." unless is_east(action)
+  def move_east(input)
+    raise "can't travel, wrong input given." if wrong_input(input)
+    raise "can't travel east, not in the correct direction." unless is_east(input)
 
-    @x += 1 if is_east(action)
+    @x += 1 if is_east(input)
   end
 
-  def is_east(action)
-    action == 'M' && @direction == 'E'
+  def is_east(input)
+    input == 'M' && @direction == 'E'
+  end
+
+  def wrong_input(input)
+    input != 'M'
   end
 end
