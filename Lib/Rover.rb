@@ -60,3 +60,9 @@ class Rover
     "#{@x} : #{@y} : #{@direction}"
   end
 end
+
+# Directions for movement are done, now just to implement changing right or left
+
+# Possibly down the line change move west, move east etc. methods to just move method and
+# have it just down to one functionality, as long as conditions are met should be fine.
+# so if input is 'M' and direction is just "S" then move south.

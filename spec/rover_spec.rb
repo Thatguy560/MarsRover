@@ -62,6 +62,13 @@ describe Rover do
     end
   end
 
+  it "will allow you to check the rover's current position at any given time." do
+    rover = Rover.new(4, 2, 'W')
+    rover.move_west('M')
+    rover.move_west('M')
+    expect(rover.get_current_position).to eq '2 : 2 : W'
+  end
+
   it 'will raise an error if the correct command is given for moving.' do
     rover = Rover.new(2, 3, 'E')
     expect { rover.move_east('wrong input') }.to raise_error "can't travel, wrong input given."
