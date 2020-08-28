@@ -49,6 +49,19 @@ describe Rover do
     end
   end
 
+  context 'For when the rover is facing West' do
+    it "will move one position in that direction if input is 'M' and direction is 'W'." do
+      rover = Rover.new(5, 2, 'W')
+      rover.move_west('M')
+      expect(rover.x).to eq 4
+    end
+
+    it "will inform you if it can't travel in that direction when it's not facing west" do
+      rover = Rover.new(1, 2, 'S')
+      expect { rover.move_west('M') }.to raise_error "can't travel west, not in the correct direction."
+    end
+  end
+
   it 'will raise an error if the correct command is given for moving.' do
     rover = Rover.new(2, 3, 'E')
     expect { rover.move_east('wrong input') }.to raise_error "can't travel, wrong input given."

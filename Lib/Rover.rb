@@ -1,6 +1,6 @@
 class Rover
   attr_accessor :x, :y, :direction
-  COORDINATE_CONSTRAINTS = [0, 5].freeze
+  COORDINATE_CONSTRAINTS = [0, 5].freeze # Add constraints to a seperate file called plateau.
 
   def initialize(x, y, direction)
     @x = x
@@ -29,6 +29,13 @@ class Rover
     @x += 1 if is_east(input)
   end
 
+  def move_west(input)
+    raise "can't travel, wrong input given." if wrong_input(input)
+    raise "can't travel west, not in the correct direction." unless is_west(input)
+
+    @x -= 1 if is_west(input)
+  end
+
   def is_north(input)
     input == 'M' && @direction == 'N'
   end
@@ -41,7 +48,15 @@ class Rover
     input == 'M' && @direction == 'E'
   end
 
+  def is_west(input)
+    input == 'M' && @direction == 'W'
+  end
+
   def wrong_input(input)
     input != 'M'
+  end
+
+  def get_current_position # Put this in another file called co-ordinates.
+    "#{@x} : #{@y} : #{@direction}"
   end
 end
