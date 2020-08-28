@@ -10,7 +10,7 @@ describe Rover do
     expect(rover.direction).to eq 'N'
   end
 
-  it "will move one position to the right if input is 'M' and direction is 'E'." do
+  it "will move one position in the east direction if input is 'M' and direction is 'E'." do
     rover = Rover.new(1, 2, 'E')
     rover.move_east('M')
     expect(rover.x).to eq 2
@@ -21,8 +21,19 @@ describe Rover do
     expect { rover.move_east('M') }.to raise_error "can't travel east, not in the correct direction."
   end
 
+  it "will move one position in the south direction if input is 'M' and direction is 'S'." do
+    rover = Rover.new(2, 4, 'S')
+    rover.move_south('M')
+    expect(rover.y).to eq 3
+  end
+
+  it "will inform you if it can't travel in the south direction when it's not facing south" do
+    rover = Rover.new(1, 2, 'W')
+    expect { rover.move_south('M') }.to raise_error "can't travel south, not in the correct direction."
+  end
+
   it 'will raise an error if the correct command is given for moving.' do
-    rover1 = Rover.new(2, 3, 'E')
-    expect { rover1.move_east('wrong input') }.to raise_error "can't travel, wrong input given."
+    rover = Rover.new(2, 3, 'E')
+    expect { rover.move_east('wrong input') }.to raise_error "can't travel, wrong input given."
   end
 end
