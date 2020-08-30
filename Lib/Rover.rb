@@ -54,4 +54,4 @@ class Rover
   end
 end
 
-# 1) Implement changing right or left - Implement Direction class?
+# Implement changing right or left - Implement Direction class?
