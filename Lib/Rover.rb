@@ -9,12 +9,11 @@ class Rover
     @plateau_borders = plateau_borders
   end
 
-  def move(input)
+  def move(input) # Implement plateau class
     raise "can't travel, wrong input given." if wrong_input(input)
     raise 'cannot move any further North or East' if @y >= PLATEAU_BORDERS[1] || @x >= PLATEAU_BORDERS[1]
     raise 'cannot move any further South or West' if @y <= PLATEAU_BORDERS[0] || @x <= PLATEAU_BORDERS[0]
 
-    # Implement plateau class
     @y += 1 if facing_north(input)
     @y -= 1 if facing_south(input)
     @x += 1 if facing_east(input)
