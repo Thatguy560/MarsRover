@@ -81,6 +81,11 @@
           null
         ]
       },
+      "/Users/student/Projects/MarsRover/spec/directions_spec.rb": {
+        "lines": [
+
+        ]
+      },
       "/Users/student/Projects/MarsRover/spec/rover_spec.rb": {
         "lines": [
           1,
@@ -149,12 +154,13 @@
           7,
           7,
           7,
+          7,
           null,
           null,
           1,
           5,
-          null,
-          null,
+          4,
+          4,
           null,
           4,
           4,
@@ -179,7 +185,9 @@
           4,
           null,
           null,
-          null,
+          1,
+          0,
+          0,
           null,
           null,
           null,
@@ -199,6 +207,6 @@
         ]
       }
     },
-    "timestamp": 1598814787
+    "timestamp": 1598820736
   }
 }

@@ -3,7 +3,7 @@ require 'Rover'
 describe Rover do
   let(:rover) { Rover.new(x, y, direction) }
 
-  it 'will let you create a new rover at any point with any given co-ordinates' do
+  it 'will let you create a new rover at any point with any given co-ordinates and direction.' do
     rover = Rover.new(1, 2, 'N')
     expect(rover.x).to eq 1
     expect(rover.y).to eq 2
@@ -36,9 +36,9 @@ describe Rover do
 
   context 'For when the rover is facing West' do
     it "will move one position in that direction if input is 'M' and direction is 'W'." do
-      rover = Rover.new(5, 2, 'W')
+      rover = Rover.new(4, 2, 'W')
       rover.move('M')
-      expect(rover.x).to eq 4
+      expect(rover.x).to eq 3
     end
   end
 
