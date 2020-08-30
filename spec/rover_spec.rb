@@ -44,7 +44,7 @@ describe Rover do
 
   it "will allow you to check the rover's current position at any given time." do
     rover = Rover.new(4, 4, 'S')
-    expect(rover.to_s).to eq("x || y || direction\n4 || 4 || S\n")
+    expect(rover.to_s).to eq '4 4 S'
   end
 
   it 'will raise an error if the correct command is given for moving.' do

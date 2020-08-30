@@ -1,6 +1,6 @@
 class Rover
   attr_accessor :x, :y, :direction
-  PLATEAU_BORDERS = [0, 5].freeze # Add constraints to a seperate class called plateau?
+  PLATEAU_BORDERS = [0, 5].freeze
 
   def initialize(x, y, direction, plateau_borders = PLATEAU_BORDERS)
     @x = x
@@ -48,10 +48,10 @@ class Rover
     # Still in Progress
   end
 
-  def to_s # Put this in another class called Coordinates or just delete?
-    "x || y || direction\n" # Changed this and now test doesn't work
-    "#{@x} || #{@y} || #{@direction}\n"
+  def to_s
+    "#{@x} #{@y} #{@direction}"
   end
 end
 
 # Implement changing right or left - Implement Direction class?
+# Add plateau constraints to a seperate class called Plateau?
