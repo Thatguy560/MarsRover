@@ -2,17 +2,16 @@ class Rover
   attr_accessor :x, :y, :direction
   PLATEAU_BORDERS = [0, 5].freeze
 
-  def initialize(x, y, direction, plateau_borders = PLATEAU_BORDERS)
+  def initialize(x, y, direction)
     @x = x
     @y = y
     @direction = direction
-    @plateau_borders = plateau_borders
   end
 
   def move(input) # Implement plateau class
-    raise "can't travel, wrong input given." if wrong_input(input)
-    raise 'cannot move any further North or East' if @y >= PLATEAU_BORDERS[1] || @x >= PLATEAU_BORDERS[1]
-    raise 'cannot move any further South or West' if @y <= PLATEAU_BORDERS[0] || @x <= PLATEAU_BORDERS[0]
+    raise "Can't travel, wrong input given." if wrong_input(input)
+    raise 'Cannot move any further North or East' if @y >= PLATEAU_BORDERS[1] || @x >= PLATEAU_BORDERS[1]
+    raise 'Cannot move any further South or West' if @y <= PLATEAU_BORDERS[0] || @x <= PLATEAU_BORDERS[0]
 
     @y += 1 if facing_north(input)
     @y -= 1 if facing_south(input)

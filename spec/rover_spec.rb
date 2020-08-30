@@ -49,6 +49,6 @@ describe Rover do
 
   it 'will raise an error if the correct command is given for moving.' do
     rover = Rover.new(2, 3, 'E')
-    expect { rover.move('wrong input') }.to raise_error "can't travel, wrong input given."
+    expect { rover.move('wrong input') }.to raise_error "Can't travel, wrong input given."
   end
 end
