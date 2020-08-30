@@ -14,6 +14,7 @@ class Rover
     raise 'cannot move any further North or East' if @y >= PLATEAU_BORDERS[1] || @x >= PLATEAU_BORDERS[1]
     raise 'cannot move any further South or West' if @y <= PLATEAU_BORDERS[0] || @x <= PLATEAU_BORDERS[0]
 
+    # Implement plateau class
     @y += 1 if facing_north(input)
     @y -= 1 if facing_south(input)
     @x += 1 if facing_east(input)
@@ -37,14 +38,14 @@ class Rover
     input == 'M' && @direction == 'W'
   end
 
+  def wrong_input(input)
+    input != 'M'
+  end
+
   def turn(input) # Move turning to another class called directions?
     @direction = input == 'R' && @direction == 'N' ? 'E' : 'N'
     "Rover is now facing #{@direction}"
     # Still in Progress
-  end
-
-  def wrong_input(input)
-    input != 'M'
   end
 
   def to_s # Put this in another class called Coordinates or just delete?
@@ -53,6 +54,4 @@ class Rover
   end
 end
 
-# 1) Implement changing right or left - Implement Turn class?
-
-# 2) Implement plateau class? Set constraints to 0,5
+# 1) Implement changing right or left - Implement Direction class?
