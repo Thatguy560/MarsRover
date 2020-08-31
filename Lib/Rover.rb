@@ -41,13 +41,37 @@ class Rover
     turn_right(input)
     "Rover is now facing #{@direction}"
   end
-
+  # Turn off autoformatting Ruby
   def turn_left(input)
-    (input == 'L' && @direction == 'N') ? @direction = "W" : (input == 'L' && @direction == 'W') ? @direction = "S" : (input == 'L' && @direction == 'S') ? @direction = "E" : (input == 'L' && @direction == 'E') ? @direction = "N" : @direction
+    if input == 'L' && @direction == 'N'
+      @direction = 'W'
+    else
+      if input == 'L' && @direction == 'W'
+        @direction = 'S'
+      else
+        if input == 'L' && @direction == 'S'
+          @direction = 'E'
+        else
+          input == 'L' && @direction == 'E' ? @direction = 'N' : @direction
+  end
+    end
+end
   end
 
   def turn_right(input)
-    (input == 'R' && @direction == 'N') ? @direction = "E" : (input == 'R' && @direction == 'E') ? @direction = "S" : (input == 'R' && @direction == 'S') ? @direction = "W" : (input == 'R' && @direction == 'W') ? @direction = "N" : @direction
+    if input == 'R' && @direction == 'N'
+      @direction = 'E'
+    else
+      if input == 'R' && @direction == 'E'
+        @direction = 'S'
+      else
+        if input == 'R' && @direction == 'S'
+          @direction = 'W'
+        else
+          input == 'R' && @direction == 'W' ? @direction = 'N' : @direction
+  end
+    end
+end
   end
 
   def to_s
