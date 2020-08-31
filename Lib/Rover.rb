@@ -8,7 +8,7 @@ class Rover
     @direction = direction
   end
 
-  def move(input) # Implement plateau class
+  def move(input) # Implement plateau class?
     raise 'Cannot move any further North or East' if @y >= PLATEAU_BORDERS[1] || @x >= PLATEAU_BORDERS[1]
     raise 'Cannot move any further South or West' if @y <= PLATEAU_BORDERS[0] || @x <= PLATEAU_BORDERS[0]
 
@@ -35,10 +35,19 @@ class Rover
     input == 'M' && @direction == 'W'
   end
 
-  def turn(input) # Move turning to another class called directions?
-    @direction = input == 'R' && @direction == 'N' ? 'E' : 'N'
+  # Move turning to another class called directions?
+  def turn(input)
+    turn_left(input)
+    turn_right(input)
     "Rover is now facing #{@direction}"
-    # Still in Progress
+  end
+
+  def turn_left(input)
+    (input == 'L' && @direction == 'N') ? @direction = "W" : (input == 'L' && @direction == 'W') ? @direction = "S" : (input == 'L' && @direction == 'S') ? @direction = "E" : (input == 'L' && @direction == 'E') ? @direction = "N" : @direction
+  end
+
+  def turn_right(input)
+    (input == 'R' && @direction == 'N') ? @direction = "E" : (input == 'R' && @direction == 'E') ? @direction = "S" : (input == 'R' && @direction == 'S') ? @direction = "W" : (input == 'R' && @direction == 'W') ? @direction = "N" : @direction
   end
 
   def to_s
@@ -48,3 +57,5 @@ end
 
 # Implement changing right or left - Implement Direction class?
 # Add plateau constraints to a seperate class called Plateau?
+
+# condition ? return true value : another condition ? return true value : another condition
