@@ -36,14 +36,14 @@ class Rover
     input == 'M'
   end
 
+  def to_s
+    "#{@x} #{@y} #{@direction}"
+  end
+
   def turn(input) # Move turning to another class called Directions?
     (input == 'L' && @direction == 'N') ? @direction = "W" : (input == 'L' && @direction == 'W') ? @direction = "S" : (input == 'L' && @direction == 'S') ? @direction = "E" : (input == 'L' && @direction == 'E') ? @direction = "N" : @direction
     (input == 'R' && @direction == 'N') ? @direction = "E" : (input == 'R' && @direction == 'E') ? @direction = "S" : (input == 'R' && @direction == 'S') ? @direction = "W" : (input == 'R' && @direction == 'W') ? @direction = "N" : @direction
     "Rover is now facing #{@direction}"
-  end
-
-  def to_s
-    "#{@x} #{@y} #{@direction}"
   end
 end
 

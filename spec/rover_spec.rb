@@ -22,7 +22,7 @@ describe Rover do
       10.times do
         rover.move("M")
       end
-      expect(rover.y).to eq 5
+      expect(rover.y).to eq Rover::PLATEAU_BORDERS[1]
     end
   end
 
@@ -38,7 +38,7 @@ describe Rover do
       10.times do
         rover.move("M")
       end
-      expect(rover.x).to eq 5
+      expect(rover.x).to eq Rover::PLATEAU_BORDERS[1]
     end
   end
 
@@ -54,7 +54,7 @@ describe Rover do
       10.times do
         rover.move("M")
       end
-      expect(rover.y).to eq 0
+      expect(rover.y).to eq Rover::PLATEAU_BORDERS[0]
     end
   end
 
@@ -70,7 +70,7 @@ describe Rover do
       10.times do
         rover.move("M")
       end
-      expect(rover.x).to eq 0
+      expect(rover.x).to eq Rover::PLATEAU_BORDERS[0]
     end
   end
 
