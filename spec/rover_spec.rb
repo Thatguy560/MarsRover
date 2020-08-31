@@ -16,6 +16,14 @@ describe Rover do
       rover.move('M')
       expect(rover.y).to eq 2
     end
+
+    it "won't let you move any further past the North plateau border" do
+      rover = Rover.new(1, 3, 'N')
+      10.times do
+        rover.move("M")
+      end
+      expect(rover.y).to eq 5
+    end
   end
 
   context 'For when the rover is facing East' do
@@ -23,6 +31,14 @@ describe Rover do
       rover = Rover.new(1, 2, 'E')
       rover.move('M')
       expect(rover.x).to eq 2
+    end
+
+    it "won't let you move any further past the East plateau border" do
+      rover = Rover.new(3, 1, 'E')
+      10.times do
+        rover.move("M")
+      end
+      expect(rover.x).to eq 5
     end
   end
 
@@ -32,6 +48,14 @@ describe Rover do
       rover.move('M')
       expect(rover.y).to eq 3
     end
+
+    it "won't let you move any further past the South plateau border" do
+      rover = Rover.new(1, 3, 'S')
+      10.times do
+        rover.move("M")
+      end
+      expect(rover.y).to eq 0
+    end
   end
 
   context 'For when the rover is facing West' do
@@ -40,30 +64,18 @@ describe Rover do
       rover.move('M')
       expect(rover.x).to eq 3
     end
+
+    it "won't let you move any further past the West plateau border" do
+      rover = Rover.new(3, 1, 'W')
+      10.times do
+        rover.move("M")
+      end
+      expect(rover.x).to eq 0
+    end
   end
 
   it "will allow you to check the rover's current position at any given time." do
     rover = Rover.new(4, 4, 'S')
     expect(rover.to_s).to eq '4 4 S'
-  end
-
-  it 'will throw an error if you try to move past the North plateau borders' do
-    rover = Rover.new(3, 5, 'N')
-    expect { rover.move('M') }.to raise_error 'Cannot move any further North'
-  end
-
-  it 'will throw an error if you try to move past the East plateau borders' do
-    rover = Rover.new(5, 3, 'E')
-    expect { rover.move('M') }.to raise_error 'Cannot move any further East'
-  end
-
-  it 'will throw an error if you try to move past the South plateau borders' do
-    rover = Rover.new(3, 0, 'S')
-    expect { rover.move('M') }.to raise_error 'Cannot move any further South'
-  end
-
-  it 'will throw an error if you try to move past the West plateau borders' do
-    rover = Rover.new(0, 3, 'W')
-    expect { rover.move('M') }.to raise_error 'Cannot move any further West'
   end
 end

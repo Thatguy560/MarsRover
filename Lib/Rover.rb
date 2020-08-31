@@ -9,14 +9,10 @@ class Rover
   end
 
   def move(input) # Add plateau constraints to seperate class called Plateau?
-    raise 'Cannot move any further North' if @y >= PLATEAU_BORDERS[1]
-    raise 'Cannot move any further East' if @x >= PLATEAU_BORDERS[1]
-    raise 'Cannot move any further South' if @y <= PLATEAU_BORDERS[0]
-    raise 'Cannot move any further West' if @x <= PLATEAU_BORDERS[0]
-    @y += 1 if facing_north && moving(input)
-    @x += 1 if facing_east && moving(input)
-    @y -= 1 if facing_south && moving(input)
-    @x -= 1 if facing_west && moving(input)
+    @y += 1 if facing_north && moving(input) unless @y >= PLATEAU_BORDERS[1]
+    @x += 1 if facing_east && moving(input) unless @x >= PLATEAU_BORDERS[1]
+    @y -= 1 if facing_south && moving(input) unless @y <= PLATEAU_BORDERS[0]
+    @x -= 1 if facing_west && moving(input) unless @x <= PLATEAU_BORDERS[0]
     "Current Rover co-ordinates are #{@x} : #{@y} : #{@direction}"
   end
 
@@ -40,8 +36,7 @@ class Rover
     input == 'M'
   end
 
-  # Move turning to another class called directions?
-  def turn(input)
+  def turn(input) # Move turning to another class called Directions?
     (input == 'L' && @direction == 'N') ? @direction = "W" : (input == 'L' && @direction == 'W') ? @direction = "S" : (input == 'L' && @direction == 'S') ? @direction = "E" : (input == 'L' && @direction == 'E') ? @direction = "N" : @direction
     (input == 'R' && @direction == 'N') ? @direction = "E" : (input == 'R' && @direction == 'E') ? @direction = "S" : (input == 'R' && @direction == 'S') ? @direction = "W" : (input == 'R' && @direction == 'W') ? @direction = "N" : @direction
     "Rover is now facing #{@direction}"
