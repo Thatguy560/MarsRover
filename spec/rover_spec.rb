@@ -18,19 +18,19 @@ describe Rover do
     end
   end
 
-  context 'For when the rover is facing South' do
-    it "will move one position in that direction if input is 'M' and direction is 'S'." do
-      rover = Rover.new(2, 4, 'S')
-      rover.move('M')
-      expect(rover.y).to eq 3
-    end
-  end
-
   context 'For when the rover is facing East' do
     it "will move one position in that direction if input is 'M' and direction is 'E'." do
       rover = Rover.new(1, 2, 'E')
       rover.move('M')
       expect(rover.x).to eq 2
+    end
+  end
+
+  context 'For when the rover is facing South' do
+    it "will move one position in that direction if input is 'M' and direction is 'S'." do
+      rover = Rover.new(2, 4, 'S')
+      rover.move('M')
+      expect(rover.y).to eq 3
     end
   end
 
@@ -47,13 +47,23 @@ describe Rover do
     expect(rover.to_s).to eq '4 4 S'
   end
 
-  it 'will throw an error if you try to move past the North or East plateau borders' do
+  it 'will throw an error if you try to move past the North plateau borders' do
     rover = Rover.new(3, 5, 'N')
-    expect { rover.move('M') }.to raise_error 'Cannot move any further North or East'
+    expect { rover.move('M') }.to raise_error 'Cannot move any further North'
   end
 
-  it 'will throw an error if you try to move past the South or West plateau borders' do
+  it 'will throw an error if you try to move past the East plateau borders' do
+    rover = Rover.new(5, 3, 'E')
+    expect { rover.move('M') }.to raise_error 'Cannot move any further East'
+  end
+
+  it 'will throw an error if you try to move past the South plateau borders' do
+    rover = Rover.new(3, 0, 'S')
+    expect { rover.move('M') }.to raise_error 'Cannot move any further South'
+  end
+
+  it 'will throw an error if you try to move past the West plateau borders' do
     rover = Rover.new(0, 3, 'W')
-    expect { rover.move('M') }.to raise_error 'Cannot move any further South or West'
+    expect { rover.move('M') }.to raise_error 'Cannot move any further West'
   end
 end
