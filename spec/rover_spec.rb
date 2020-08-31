@@ -47,8 +47,13 @@ describe Rover do
     expect(rover.to_s).to eq '4 4 S'
   end
 
-  it 'will raise an error if the correct command is given for moving.' do
-    rover = Rover.new(2, 3, 'E')
-    expect { rover.move('wrong input') }.to raise_error "Can't travel, wrong input given."
+  it 'will throw an error if you try to move past the North or East plateau borders' do
+    rover = Rover.new(3, 5, 'N')
+    expect { rover.move('M') }.to raise_error 'Cannot move any further North or East'
+  end
+
+  it 'will throw an error if you try to move past the South or West plateau borders' do
+    rover = Rover.new(0, 3, 'W')
+    expect { rover.move('M') }.to raise_error 'Cannot move any further South or West'
   end
 end
