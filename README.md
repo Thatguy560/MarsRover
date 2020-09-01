@@ -44,6 +44,26 @@ MMRMMRMRRM
 
 # Running the program in irb
 
+$ git clone https://github.com/Thatguy560/mars-rover.git
+
+$ cd mars-rover
+
+$ run bundle in Commandline (To install all the dependencies)
+
+$ Type irb in Commandline
+
+$ require './lib/Rover.rb'
+
+$ Instantiate a new instance of the Rover class with any coordinates and direction of your choice e.g. rover = Rover.new(3, 3, "E")
+
+$ To move the rover type in - rover.move("M")
+
+$ To make the rover turn left type - rover.turn("L")
+
+$ To make the rover turn right type - rover.turn("R")
+
+$ To check the rovers co-ordinates at any time type - rover.return_coordinates
+
 # Example Usage
 
 ```ruby
