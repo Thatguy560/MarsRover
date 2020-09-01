@@ -56,7 +56,7 @@ $ require './lib/Rover.rb'
 
 $ Instantiate a new instance of the Rover class with any coordinates and direction of your choice e.g. rover = Rover.new(3, 3, "E")
 
-$ To move the rover type in - rover.move("M")
+$ To move the rover type - rover.move("M")
 
 $ To make the rover turn left type - rover.turn("L")
 
