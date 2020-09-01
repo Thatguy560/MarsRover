@@ -71,11 +71,9 @@ rover2.turn("R")
 rover2.move("M")
 
 rover1.return_coordinates
-
 "Rover co-ordinates are 1, 3 facing N"
 
 rover2.return_coordinates
-
 "Rover co-ordinates are 5, 1 facing E"
 ```
 
