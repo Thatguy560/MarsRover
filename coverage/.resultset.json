@@ -81,7 +81,7 @@
           null
         ]
       },
-      "/Users/student/Projects/MarsRover/spec/rover_spec.rb": {
+      "/Users/student/Projects/MarsRover/spec/Rover_spec.rb": {
         "lines": [
           1,
           null,
@@ -285,6 +285,6 @@
         ]
       }
     },
-    "timestamp": 1598980890
+    "timestamp": 1598986226
   }
 }
