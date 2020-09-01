@@ -58,17 +58,17 @@ rover1.turn("L") #<Rover:0x00007f89e28ef558 @x=1, @y=1, @direction="N">
 rover1.move("M") #<Rover:0x00007f89e28ef558 @x=1, @y=2, @direction="N">
 rover1.move("M") #<Rover:0x00007f89e28ef558 @x=1, @y=3, @direction="N">
 
-rover2 = Rover.new(3, 3, "E")
-rover2.move("M")
-rover2.move("M")
-rover2.turn("R")
-rover2.move("M")
-rover2.move("M")
-rover2.turn("R")
-rover2.move("M")
-rover2.turn("R")
-rover2.turn("R")
-rover2.move("M")
+rover2 = Rover.new(3, 3, "E") #<Rover:0x00007f89e2857ac8 @x=3, @y=3, @direction="E">
+rover2.move("M") #<Rover:0x00007f89e2857ac8 @x=4, @y=3, @direction="E">
+rover2.move("M") #<Rover:0x00007f89e2857ac8 @x=5, @y=3, @direction="E">
+rover2.turn("R") #<Rover:0x00007f89e2857ac8 @x=5, @y=3, @direction="S">
+rover2.move("M") #<Rover:0x00007f89e2857ac8 @x=5, @y=2, @direction="S">
+rover2.move("M") #<Rover:0x00007f89e2857ac8 @x=5, @y=1, @direction="S">
+rover2.turn("R") #<Rover:0x00007f89e2857ac8 @x=5, @y=1, @direction="W">
+rover2.move("M") #<Rover:0x00007f89e2857ac8 @x=4, @y=1, @direction="W">
+rover2.turn("R") #<Rover:0x00007f89e2857ac8 @x=4, @y=1, @direction="N">
+rover2.turn("R") #<Rover:0x00007f89e2857ac8 @x=4, @y=1, @direction="E">
+rover2.move("M") #<Rover:0x00007f89e2857ac8 @x=5, @y=1, @direction="E">
 
 rover1.return_coordinates
 "Rover co-ordinates are 1, 3 facing N"
