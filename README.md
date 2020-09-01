@@ -52,7 +52,7 @@ $ run bundle in Commandline (To install all the dependencies)
 
 $ Type irb in Commandline
 
-$ require './lib/Rover.rb'
+$ require './lib/rover.rb'
 
 $ Instantiate a new instance of the Rover class with any coordinates and direction of your choice e.g. rover = Rover.new(3, 3, "E")
 
