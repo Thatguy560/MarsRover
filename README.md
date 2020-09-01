@@ -46,6 +46,39 @@ MMRMMRMRRM
 
 # Example Usage
 
+```ruby
+rover1 = Rover.new(1, 2, "N")
+rover1.turn("L")
+rover1.move("M")
+rover1.turn("L")
+rover1.move("M")
+rover1.turn("L")
+rover1.move("M")
+rover1.turn("L")
+rover1.move("M")
+rover1.move("M")
+
+rover2 = Rover.new(3, 3, "E")
+rover2.move("M")
+rover2.move("M")
+rover2.turn("R")
+rover2.move("M")
+rover2.move("M")
+rover2.turn("R")
+rover2.move("M")
+rover2.turn("R")
+rover2.turn("R")
+rover2.move("M")
+
+rover1.return_coordinates
+
+"Rover co-ordinates are 1, 3 facing N"
+
+rover2.return_coordinates
+
+"Rover co-ordinates are 5, 1 facing E"
+```
+
 # Check Test Coverage
 
 ```ruby
