@@ -1,11 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Projects/MarsRover/spec/Directions_spec.rb": {
-        "lines": [
-
-        ]
-      },
       "/Users/student/Projects/MarsRover/spec/Rover_oldcode_spec.rb": {
         "lines": [
           null,
@@ -286,14 +281,10 @@
           null,
           null,
           null,
-          null,
-          null,
-          null,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1598979847
+    "timestamp": 1598980890
   }
 }

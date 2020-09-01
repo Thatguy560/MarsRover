@@ -6,11 +6,13 @@ A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This pl
 
 **Preparation**
 
-![Planning1](Assets/118301811_629375557764647_7487401521254086730_n.jpg)
+![Example1](Assets/Example1.jpg)
 
-![Planning2](Assets/118453424_615477752492752_5306749641348469864_n.jpg)
+![Example2](Assets/Example2.jpg)
 
-![Planning3](Assets/118501925_3569553699724094_5064268417354812596_n.jpg)
+![Planning](Assets/Planning.jpg)
+
+![Planning2](Assets/Planning2.jpg)
 
 **Input**
 
