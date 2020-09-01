@@ -1,7 +1,7 @@
 require 'Rover'
 
 describe Rover do
-  let(:rover) { Rover.new(x, y, direction) }
+  # let(:rover) { Rover.new(x, y, direction) }
 
   it 'will let you create a new rover at any point with any given co-ordinates and direction.' do
     rover = Rover.new(1, 2, 'N')
@@ -76,6 +76,6 @@ describe Rover do
 
   it "will allow you to check the rover's current position at any given time." do
     rover = Rover.new(4, 4, 'S')
-    expect(rover.to_s).to eq '4 4 S'
+    expect(rover.return_coordinates).to eq "Current Rover co-ordinates are 4, 4 facing S"
   end
 end

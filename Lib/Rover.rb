@@ -1,6 +1,19 @@
 class Rover
   attr_accessor :x, :y, :direction
   PLATEAU_BORDERS = [0, 5].freeze
+  LEFT = {
+    "N" => "W",
+    "E" => "N",
+    "S" => "E",
+    "W" => "S",
+  }.freeze
+
+  RIGHT = {
+    "N" => "E",
+    "E" => "S",
+    "S" => "W",
+    "W" => "N",
+  }.freeze
 
   def initialize(x, y, direction)
     @x = x
@@ -13,7 +26,7 @@ class Rover
     @x += 1 if facing_east && moving(input) unless @x >= PLATEAU_BORDERS[1]
     @y -= 1 if facing_south && moving(input) unless @y <= PLATEAU_BORDERS[0]
     @x -= 1 if facing_west && moving(input) unless @x <= PLATEAU_BORDERS[0]
-    "Current Rover co-ordinates are #{@x} : #{@y} : #{@direction}"
+    return_coordinates
   end
 
   def facing_north
@@ -32,19 +45,17 @@ class Rover
     @direction == 'W'
   end
 
-  def moving(input)
+  def moving(input) # Change this to command method so if input is M OR R OR L.
     input == 'M'
   end
 
-  def to_s
-    "#{@x} #{@y} #{@direction}"
-  end
-
   def turn(input) # Move turning to another class called Directions?
-    (input == 'L' && @direction == 'N') ? @direction = "W" : (input == 'L' && @direction == 'W') ? @direction = "S" : (input == 'L' && @direction == 'S') ? @direction = "E" : (input == 'L' && @direction == 'E') ? @direction = "N" : @direction
-    (input == 'R' && @direction == 'N') ? @direction = "E" : (input == 'R' && @direction == 'E') ? @direction = "S" : (input == 'R' && @direction == 'S') ? @direction = "W" : (input == 'R' && @direction == 'W') ? @direction = "N" : @direction
+    @direction = LEFT.fetch(@direction) if input == "L"
+    @direction = RIGHT.fetch(@direction) if input == "R"
     "Rover is now facing #{@direction}"
   end
-end
 
-# Implement changing right or left - Implement Direction class?
+  def return_coordinates # Remove Method?
+    "Current Rover co-ordinates are #{@x}, #{@y} facing #{@direction}"
+  end
+end
