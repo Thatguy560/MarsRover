@@ -61,3 +61,6 @@ end
 
 # the lower-left coordinates of the plateau are 0,0.
 # the upper-right coordinates of the plateau are 5,5.
+
+# Add in a test to ensure rover can't be instintiated with unknown values
+# or values greater than 5 or less than 0.
