@@ -49,14 +49,14 @@ MMRMMRMRRM
 ```ruby
 rover1 = Rover.new(1, 2, "N") #<Rover:0x00007f89e28ef558 @x=1, @y=2, @direction="N">
 rover1.turn("L") #<Rover:0x00007f89e28ef558 @x=1, @y=2, @direction="W">
-rover1.move("M")
-rover1.turn("L")
-rover1.move("M")
-rover1.turn("L")
-rover1.move("M")
-rover1.turn("L")
-rover1.move("M")
-rover1.move("M")
+rover1.move("M") #<Rover:0x00007f89e28ef558 @x=0, @y=2, @direction="W">
+rover1.turn("L") #<Rover:0x00007f89e28ef558 @x=0, @y=2, @direction="S">
+rover1.move("M") #<Rover:0x00007f89e28ef558 @x=0, @y=1, @direction="S">
+rover1.turn("L") #<Rover:0x00007f89e28ef558 @x=0, @y=1, @direction="E">
+rover1.move("M") #<Rover:0x00007f89e28ef558 @x=1, @y=1, @direction="E">
+rover1.turn("L") #<Rover:0x00007f89e28ef558 @x=1, @y=1, @direction="N">
+rover1.move("M") #<Rover:0x00007f89e28ef558 @x=1, @y=2, @direction="N">
+rover1.move("M") #<Rover:0x00007f89e28ef558 @x=1, @y=3, @direction="N">
 
 rover2 = Rover.new(3, 3, "E")
 rover2.move("M")
