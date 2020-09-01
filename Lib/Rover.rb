@@ -57,11 +57,7 @@ class Rover
   end
 end
 
-# Change this to command method so if input is M OR R OR L.
-
-# def moving(input)
-  # input == 'M'
-# end
+# Have a command method? So if input is M, R OR L it moves, turns right/left.
 
 # the lower-left coordinates of the plateau are 0,0.
 # the upper-right coordinates of the plateau are 5,5.
