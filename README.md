@@ -44,16 +44,28 @@ MMRMMRMRRM
 
 # User Stories
 
-<!-- ```
-In order to use public transport
-As a customer
-I want money on my card
+```
+In order to be able to travel
+As a user
+I want to be able to move the NASA rover
 ```
 ```
-In order to keep using public transport
-As a customer
-I want to add money to my card
-``` -->
+In order to traverse the terrain 
+As a user
+I want to be able to turn the rover left and right
+``` 
+```
+In order to move safely within the plateau
+As a user
+I want to have plateau border limits 
+``` 
+```
+In order to see the rovers position
+As a user
+I want to be able to check the rovers co-ordinates and heading.
+```
+
+<!-- check the coordinates of the rover and Plateau constraints -->
 
 # Running the program in irb
 
