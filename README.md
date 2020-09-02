@@ -50,15 +50,15 @@ As a user
 I want to be able to move the NASA rover
 ```
 ```
-In order to traverse the terrain 
+In order to traverse the surrounding terrain 
 As a user
 I want to be able to turn the rover left and right
-``` 
+```
 ```
 In order to move safely within the plateau
 As a user
-I want to have plateau border limits 
-``` 
+I want to have plateau border limits
+```
 ```
 In order to see the rovers position
 As a user
