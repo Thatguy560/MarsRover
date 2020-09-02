@@ -28,9 +28,9 @@ MMRMMRMRRM
 
 ## **Expected Output:**
 
-13N
+1 3 N
 
-51E
+5 1 E
 
 # Preparation
 
