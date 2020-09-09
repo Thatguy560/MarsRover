@@ -1,4 +1,4 @@
-require 'Rover'
+require 'rover'
 
 describe Rover do
   it 'will let you create a new rover with any given co-ordinates and direction.' do

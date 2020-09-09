@@ -1,5 +1,5 @@
 class Rover
-  attr_accessor :x, :y, :direction
+  attr_reader :x, :y, :direction
   PLATEAU_BORDERS = [0, 5].freeze
 
   LEFT = {
@@ -56,11 +56,3 @@ class Rover
     "Rover co-ordinates are #{@x}, #{@y} facing #{@direction}"
   end
 end
-
-# Have a command method? So if input is M, R OR L it moves, turns right/left.
-
-# the lower-left coordinates of the plateau are 0,0.
-# the upper-right coordinates of the plateau are 5,5.
-
-# Add in a test to ensure rover can't be instintiated with unknown values
-# or values greater than 5 or less than 0.

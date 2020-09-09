@@ -1,86 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Projects/MarsRover/spec/Rover_oldcode_spec.rb": {
-        "lines": [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
       "/Users/student/Projects/MarsRover/spec/rover_spec.rb": {
         "lines": [
           1,
@@ -216,7 +136,7 @@
           null
         ]
       },
-      "/Users/student/Projects/MarsRover/lib/Rover.rb": {
+      "/Users/student/Projects/MarsRover/lib/rover.rb": {
         "lines": [
           1,
           1,
@@ -275,18 +195,10 @@
           1,
           1,
           null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1599055808
+    "timestamp": 1599659705
   }
 }
