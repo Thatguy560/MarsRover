@@ -30,7 +30,7 @@ class Rover
     self
   end
 
-  def turn(input) # Move turning to another class called Directions?
+  def turn(input)
     @direction = LEFT[@direction] if input == 'L'
     @direction = RIGHT[@direction] if input == 'R'
     self
