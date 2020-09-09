@@ -129,7 +129,7 @@ Type 'bundle install' into terminal
 
 Type 'rspec' into terminal
 
-Test Coverage 100.00% -- 113/113 lines in 3 files
+Test Coverage 100.00% -- 113/113 lines in 2 files
 
 18 examples, 0 failures
 ```
